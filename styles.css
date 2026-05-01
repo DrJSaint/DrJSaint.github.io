@@ -283,42 +283,61 @@ nav {
 
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1.25rem;
 }
 
 .card {
   background: #fff;
   border: 1px solid rgba(42,46,53,0.09);
+  border-top: 3px solid transparent;
   border-radius: 10px;
   padding: 1.4rem 1.5rem;
   transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card::after {
+  content: '↗';
+  position: absolute;
+  top: 0.85rem;
+  right: 1rem;
+  font-size: 0.85rem;
+  color: var(--muted-light);
+  opacity: 0;
+  transition: opacity 0.2s ease, color 0.2s ease;
 }
 
 .card:hover {
   border-color: var(--amber);
+  border-top-color: var(--amber);
   box-shadow: 0 4px 20px rgba(200,132,58,0.1);
   transform: translateY(-2px);
 }
 
+.card:hover::after {
+  opacity: 1;
+  color: var(--amber);
+}
+
 .card h3 {
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--text-light);
 }
 
-.card a {
+.card-url {
   font-size: 0.82rem;
   color: var(--muted-light);
-  text-decoration: none;
-  transition: color 0.2s ease;
-  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-
-.card a:hover { color: var(--amber); }
 
 /* ─── Social Sidebar ─────────────────────────────────────────────────────── */
 .social-sidebar {
