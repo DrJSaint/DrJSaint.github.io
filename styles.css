@@ -299,6 +299,7 @@ nav {
   gap: 0.4rem;
   position: relative;
   text-decoration: none;
+  color: inherit;
   cursor: pointer;
 }
 
