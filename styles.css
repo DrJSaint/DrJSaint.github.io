@@ -209,12 +209,13 @@ nav {
 
 /* ─── Research & Publications ────────────────────────────────────────────── */
 #research {
-  background: var(--light);
+  background: var(--dark);
   padding: 5.5rem max(2rem, 8vw);
+  color: var(--text-dark);
 }
 
-#research .section-title { color: var(--text-light); }
-#research .section-intro { color: var(--muted-light); }
+#research .section-title { color: var(--text-dark); }
+#research .section-intro { color: var(--muted-dark); }
 
 .publications-list {
   list-style: none;
@@ -226,7 +227,7 @@ nav {
 .pub-entry {
   padding: 0.85rem 0 0.85rem 1.25rem;
   border-left: 3px solid transparent;
-  border-bottom: 1px solid rgba(42,46,53,0.07);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
   transition: border-left-color 0.2s ease;
 }
 
@@ -236,7 +237,7 @@ nav {
 
 .pub-meta {
   display: block;
-  color: var(--muted-light);
+  color: var(--muted-dark);
   font-size: 0.84rem;
   margin-bottom: 0.3rem;
 }
@@ -252,20 +253,19 @@ nav {
 
 .pub-venue {
   display: block;
-  color: var(--muted-light);
+  color: var(--muted-dark);
   font-size: 0.84rem;
   font-style: italic;
 }
 
 /* ─── Teaching ───────────────────────────────────────────────────────────── */
 #teaching {
-  background: var(--dark);
+  background: var(--light);
   padding: 5.5rem max(2rem, 8vw);
-  color: var(--text-dark);
 }
 
-#teaching .section-title  { color: var(--text-dark); }
-#teaching .section-intro  { color: var(--muted-dark); }
+#teaching .section-title  { color: var(--text-light); }
+#teaching .section-intro  { color: var(--muted-light); }
 
 /* ─── People & Projects ──────────────────────────────────────────────────── */
 #people {
