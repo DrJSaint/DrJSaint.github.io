@@ -374,6 +374,85 @@ nav {
   background: rgba(200,132,58,0.1);
 }
 
+/* ─── Contact ────────────────────────────────────────────────────────────── */
+#contact {
+  background: var(--dark);
+  padding: 5.5rem max(2rem, 8vw);
+  color: var(--text-dark);
+}
+
+#contact .section-title { color: var(--text-dark); }
+#contact .section-intro  { color: var(--muted-dark); margin-bottom: 2.5rem; }
+
+.contact-success {
+  display: none;
+  color: var(--amber);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form-error {
+  display: none;
+  color: #e07070;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  color: var(--muted-dark);
+  letter-spacing: 0.02em;
+}
+
+.form-group input,
+.form-group textarea {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: var(--text-dark);
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+  outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: var(--muted-dark); opacity: 0.6; }
+
+.form-group input:focus,
+.form-group textarea:focus { border-color: var(--amber); }
+
+.form-group textarea { resize: vertical; }
+
+.field-error {
+  font-size: 0.8rem;
+  color: #e07070;
+}
+
+.form-submit {
+  background: var(--amber);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.form-submit:hover { opacity: 0.85; }
+.form-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
 /* ─── Footer ─────────────────────────────────────────────────────────────── */
 footer {
   background: var(--dark);

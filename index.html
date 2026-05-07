@@ -196,8 +196,39 @@
     <a href="mailto:saintylad@hotmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
   </aside>
 
-  <!-- ─── Footer / Contact ──────────────────────────────────────────────── -->
-  <footer id="contact">
+  <!-- ─── Contact ────────────────────────────────────────────────────────── -->
+  <section id="contact">
+    <div class="section-inner">
+      <span class="section-label">Contact</span>
+      <h2 class="section-title">Get in touch</h2>
+      <p class="section-intro">Questions, collaborations, or just want to say hello — fill in the form and I'll get back to you.</p>
+
+      <div data-fs-success class="contact-success">Thanks — I'll be in touch.</div>
+      <div data-fs-error class="contact-form-error"></div>
+
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required data-fs-field placeholder="Your name">
+          <span data-fs-error="name" class="field-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required data-fs-field placeholder="your@email.com">
+          <span data-fs-error="email" class="field-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required data-fs-field rows="5" placeholder="What's on your mind?"></textarea>
+          <span data-fs-error="message" class="field-error"></span>
+        </div>
+        <button type="submit" data-fs-submit-btn class="form-submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ─── Footer ───────────────────────────────────────────────────────────── -->
+  <footer>
     <div class="footer-social">
       <a href="https://scholar.google.co.uk/citations?hl=en&user=ZsB9k_0AAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
       <a href="https://orcid.org/0000-0002-8338-9300" target="_blank" rel="noopener noreferrer" aria-label="ORCID"><i class="ai ai-orcid"></i></a>
@@ -209,5 +240,10 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#contact-form', formId: 'xlgzlzvn' });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
